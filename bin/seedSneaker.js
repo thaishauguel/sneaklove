@@ -10,7 +10,7 @@ const sneakers = [
     description: "Best women sneakers",
     price: 99.99,
     category: "women",
-    id_tags: ["6041fac4e737002d9167d4e1"]
+    id_tags: ["60426b07d00f1766d9e4577d"]
   },
   {
     name: "Nike Airjordan ",
@@ -19,7 +19,7 @@ const sneakers = [
     description: "Basketball sneakers",
     price: 109.99,
     category: "men",
-    id_tags: ["6041fac4e737002d9167d4e3"]
+    id_tags: ["60426b07d00f1766d9e4577b"]
   },
   {
     name: "Nike AirForce 1 ",
@@ -28,7 +28,7 @@ const sneakers = [
     description: "Sneakers for kids",
     price: 79.99,
     category: "kids",
-    id_tags: ["6041fac4e737002d9167d4e6"]
+    id_tags: ["60426b07d00f1766d9e4577f"]
   },
 ];
 

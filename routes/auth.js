@@ -3,10 +3,15 @@ const router = new express.Router();
 const bcrypt = require('bcrypt')
 const User = require('./../models/User')
 
+router.get("/logout", (req, res) => {
+    req.session.destroy(function (err) {
+        res.redirect("/");
+    });
+});
 
 router.get("/signup", (req, res) => {
     res.render("signup")
-})
+});
 
 router.post("/signup", async (req, res) => {
     console.log("HEY");
@@ -35,7 +40,7 @@ router.get('/signin', async (req, res) => {
     } catch(err) {
         console.log(err);
     }
-})
+});
 
 router.post('/signin', async (req, res) => {
     
@@ -65,5 +70,7 @@ router.post('/signin', async (req, res) => {
     } catch(err) {
         console.log(err);
     }
-})
+});
+
+
 module.exports = router;
