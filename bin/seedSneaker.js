@@ -6,28 +6,32 @@ const sneakers = [
   {
     name: "Nike Airmax 270",
     ref: "air270",
-    size: 41,
+    size: [37,41,52],
     description: "Best women sneakers",
     price: 99.99,
     category: "women",
+    id_tags: ["6041fac4e737002d9167d4e1"]
   },
   {
     name: "Nike Airjordan ",
     ref: "airj03",
-    size: 47,
+    size: [42,44,47],
     description: "Basketball sneakers",
     price: 109.99,
     category: "men",
+    id_tags: ["6041fac4e737002d9167d4e3"]
   },
   {
     name: "Nike AirForce 1 ",
     ref: "airf01",
-    size: 35,
+    size: [35,36,40],
     description: "Sneakers for kids",
     price: 79.99,
     category: "kids",
+    id_tags: ["6041fac4e737002d9167d4e6"]
   },
 ];
+
 
 SneakerModel.create(sneakers)
   .then((sneakers) => console.log(sneakers))
