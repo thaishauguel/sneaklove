@@ -1,12 +1,13 @@
 const express = require("express"); // import express in this module
 const router = new express.Router(); // create an app sub-module (router)
+const protectPrivateRoute = require("./../middlewares/protectPrivateRoute");
 const Sneakers = require('./../models/Sneaker')
 const Tags = require("./../models/Tag");
 const uploader = require("../config/cloudinary");
 
 
 
-router.get("/prod-manage", async (req, res) => {
+router.get("/prod-manage", protectPrivateRoute, async (req, res) => {
     try{
         const sneakers = await Sneakers.find()
         res.render('products_manage', {sneakers})
@@ -14,7 +15,7 @@ router.get("/prod-manage", async (req, res) => {
      console.log(err);}
   });
 
-  router.get("/prod-add", async (req, res) => {
+  router.get("/prod-add", protectPrivateRoute, async (req, res) => {
     try{
         const tags = await Tags.find()
         res.render('products_add', {tags} )
