@@ -24,7 +24,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./bin/www",
-    "server": "nodemon ./bin/www -e js,hbs"
+    "server": "nodemon ./bin/www -e js,hbs",
+    "seed:sneaker": "node ./bin/seedSneaker.js",
+    "seed:user": "node ./bin/seedUser.js",
+    "seed:tag": "node ./bin/seedTag.js"
   },
   "keywords": [],
   "author": "",
